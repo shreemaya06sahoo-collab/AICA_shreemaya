@@ -30,7 +30,7 @@ app.include_router(dashboard.router, prefix="/api")
 
 _start_time = time.time()
 
-@app.get("/ping")
+@app.api_route("/ping", methods=["GET", "HEAD"])
 async def ping():
     return "pong"
 
